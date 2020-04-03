@@ -1,1 +1,384 @@
-
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #15202b;
+  font-family: 'Oxygen';
+  font-weight: 400;
+  font-size: 14px;
+}
+body .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+body .flex-container .flexbox {
+  flex-grow: 1;
+  align-self: auto;
+}
+body .flex-container .flexbox.full {
+  width: calc(100% - 20px);
+}
+body .flex-container .flexbox.half {
+  width: calc(50% - 20px);
+}
+body .flex-container .flexbox.one-third {
+  width: calc(33.333% - 20px);
+}
+body .flex-container .flexbox.two-third {
+  width: calc(66.667% - 20px);
+}
+body .flex-container .flexbox.three-fourth {
+  width: calc(75% - 20px);
+}
+body .flex-container .flexbox.one-fourth {
+  width: calc(25% - 20px);
+}
+body .flex-container.center {
+  justify-content: center;
+}
+body .flex-container.center .flexbox {
+  flex-grow: initial;
+}
+body .flex-container.flex-start {
+  justify-content: flex-start;
+}
+body .flex-container.full-height {
+  height: 100%;
+}
+body .flex-container.wrap {
+  flex-wrap: wrap;
+}
+body .vertical-middle {
+  align-items: center;
+}
+body .vertical-bottom {
+  align-items: flex-end;
+}
+body .flex-container.author {
+  margin-top: 5px;
+}
+body .container {
+  max-width: 600px;
+  border: 1px solid #38444d;
+  border-top: 0;
+  border-bottom: 0;
+  margin: auto;
+}
+body .container .search-bar {
+  padding: 15px 20px;
+  border: 1px solid #38444d;
+  border-top: 0;
+  position: fixed;
+  width: 600px;
+  top: 0;
+  z-index: 10;
+  background: #15202b;
+  left: calc(50% - 300px);
+}
+body .container .search-bar .search {
+  width: calc(100% - 45px);
+  position: relative;
+}
+body .container .search-bar .search svg {
+  fill: #8899a6;
+  width: 20px;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+body .container .search-bar .search .search-box {
+  background: rgba(136, 153, 166, 0.2);
+  border-radius: 15px;
+  outline: none;
+  border: 0;
+  padding: 5px 10px 5px 40px;
+  font-size: 15px;
+  height: 35px;
+  width: 100%;
+  color: #ffffff;
+}
+body .container .search-bar .notification {
+  padding-left: 10px;
+  width: 45px;
+}
+body .container .search-bar .notification .round {
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #38444d;
+  text-align: center;
+  position: relative;
+  width: 35px;
+  padding: 4px;
+  margin-left: auto;
+}
+body .container .search-bar .notification .round svg {
+  fill: #1da1f2;
+  width: 25px;
+}
+body .container .search-bar .notification .round .counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #1da1f2;
+  padding: 3px 5px;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: 700;
+}
+body .container .timeline {
+  margin-top: 65px;
+}
+body .container .timeline .popup {
+  position: fixed;
+  cursor: pointer;
+  top: -8px;
+  background-color: #1da1f2;
+  padding: 10px 15px;
+  border-radius: 20px;
+  left: calc(50% - 90px);
+  width: 180px;
+  z-index: 5;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+body .container .timeline .popup.appear {
+  top: 80px;
+  transition: all 0.3s ease 0s;
+}
+body .container .timeline .load-new {
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  border-bottom: 1px solid #38444d;
+  cursor: pointer;
+  font-weight: 700;
+  background: rgba(136, 153, 166, 0.2);
+}
+body .container .timeline .load-new span {
+  display: block;
+}
+body .container .timeline .load-new span:last-child {
+  margin-top: 10px;
+}
+body .container .timeline .loading {
+  color: #8899a6;
+  font-size: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #38444d;
+}
+body .container .timeline .loading svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+body .container .timeline .load-anchor {
+  height: 1px;
+}
+body .container .timeline .load-anchor .loading {
+  border: 0;
+}
+body .container .timeline .tweet {
+  padding: 15px;
+  border-bottom: 1px solid #38444d;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+body .container .timeline .tweet .profile-image {
+  max-width: 49px;
+  margin: 0 5px;
+}
+body .container .timeline .tweet .profile-image .avatar {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+}
+body .container .timeline .tweet .tweet-body {
+  margin: 0 5px;
+  color: #ffffff;
+}
+body .container .timeline .tweet .tweet-body .top-row {
+  margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 1;
+}
+body .container .timeline .tweet .tweet-body .top-row a {
+  color: #ffffff;
+  text-decoration: none;
+}
+body .container .timeline .tweet .tweet-body .top-row .verified img {
+  width: 18px;
+  margin-left: 5px;
+  position: relative;
+  top: -2px;
+}
+body .container .timeline .tweet .tweet-body .top-row .name {
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+body .container .timeline .tweet .tweet-body .top-row .username,
+body .container .timeline .tweet .tweet-body .top-row .time {
+  margin-left: 5px;
+  color: #8899a6;
+}
+body .container .timeline .tweet .tweet-body .tweet-text {
+  line-height: 1.3125;
+  white-space: pre-line;
+}
+body .container .timeline .tweet .tweet-body .tweet-text a.t-link {
+  color: #1da1f2;
+}
+body .container .timeline .tweet .tweet-body .tweet-text .media-cont {
+  margin-top: 10px;
+}
+body .container .timeline .tweet .tweet-body .tweet-text .media-cont .media {
+  max-width: 100%;
+}
+body .container .timeline .tweet .tweet-body .tweet-text .media-cont img.media {
+  border-radius: 15px;
+}
+body .container .timeline .tweet:hover {
+  background: #192734;
+  transition: all 0.2s ease;
+}
+@media only screen and (max-width: 600px) {
+  body .container {
+    width: 100%;
+  }
+  body .container .search-bar {
+    width: 100%;
+    left: 0;
+  }
+  body .container .timeline .tweet .tweet-body {
+    width: calc(100% - 90px);
+  }
+}
